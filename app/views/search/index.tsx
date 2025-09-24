@@ -1,12 +1,12 @@
 import { Component } from 'react'
 import { Text, View } from 'react-native'
-import { styles } from '../../App'
+import { styles } from '../../../App'
 
-export default class FavoritePage extends Component {
+export default class SearchPage extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Text>Favorite Page</Text>
+				<Text>Search Page</Text>
 			</View>
 		)
 	}

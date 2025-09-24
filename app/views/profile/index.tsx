@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { Text, View } from 'react-native'
-import { styles } from '../../App'
+import { styles } from '../../../App'
 
 export default class ProfilePage extends Component {
 	render() {
