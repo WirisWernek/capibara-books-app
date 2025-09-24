@@ -9,12 +9,17 @@ import ProfilePage from './app/profile'
 import SearchPage from './app/search'
 import UploadPage from './app/upload'
 
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
+import '@/global.css';
+
 const Tab = createBottomTabNavigator()
 
 export default class App extends Component {
     render() {
         return (
-            <NavigationContainer>
+            
+    <GluestackUIProvider mode="dark">
+      <NavigationContainer>
                 <Tab.Navigator>
                     <Tab.Screen name='Feed' component={FeedPage} />
                     <Tab.Screen name='Profile' component={ProfilePage} />
@@ -23,6 +28,8 @@ export default class App extends Component {
                     <Tab.Screen name='Search' component={SearchPage} />
                 </Tab.Navigator>
             </NavigationContainer>
+    </GluestackUIProvider>
+  
         )
     }
 }
