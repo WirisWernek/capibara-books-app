@@ -1,0 +1,5 @@
+{
+    "/grupos/colecao/:id": "/grupos",
+    "/decks/grupo/:id": "/decks",
+    "/flashcards/deck/:id": "/flashcards"
+}

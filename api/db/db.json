@@ -1,0 +1,126 @@
+{
+    "estante": {
+        "books": [
+            {
+                "nome": "Dom Quixote",
+                "autor": "Miguel de Cervantes",
+                "tag": "Lendo",
+                "capa": "https://example.com/dom-quixote.jpg"
+            },
+            {
+                "nome": "1984",
+                "autor": "George Orwell",
+                "tag": "Lendo",
+                "capa": "https://example.com/1984.jpg"
+            },
+            {
+                "nome": "O Senhor dos Anéis",
+                "autor": "J.R.R. Tolkien",
+                "tag": "Lendo",
+                "capa": "https://example.com/senhor-dos-aneis.jpg"
+            },
+            {
+                "nome": "Orgulho e Preconceito",
+                "autor": "Jane Austen",
+                "tag": "Lendo",
+                "capa": "https://example.com/orgulho-e-preconceito.jpg"
+            },
+            {
+                "nome": "O Pequeno Príncipe",
+                "autor": "Antoine de Saint-Exupéry",
+                "tag": "Lendo",
+                "capa": "https://example.com/o-pequeno-principe.jpg"
+            },
+            {
+                "nome": "Moby Dick",
+                "autor": "Herman Melville",
+                "tag": "Lido",
+                "capa": "https://example.com/moby-dick.jpg"
+            },
+            {
+                "nome": "A Revolução dos Bichos",
+                "autor": "George Orwell",
+                "tag": "Lido",
+                "capa": "https://example.com/revolucao-dos-bichos.jpg"
+            },
+            {
+                "nome": "Cem Anos de Solidão",
+                "autor": "Gabriel García Márquez",
+                "tag": "Lido",
+                "capa": "https://example.com/cem-anos-de-solidao.jpg"
+            },
+            {
+                "nome": "O Apanhador no Campo de Centeio",
+                "autor": "J.D. Salinger",
+                "tag": "Lido",
+                "capa": "https://example.com/apanhador-no-campo.jpg"
+            },
+            {
+                "nome": "A Divina Comédia",
+                "autor": "Dante Alighieri",
+                "tag": "Lido",
+                "capa": "https://example.com/divina-comedia.jpg"
+            },
+            {
+                "nome": "O Hobbit",
+                "autor": "J.R.R. Tolkien",
+                "tag": "Abandonado",
+                "capa": "https://example.com/o-hobbit.jpg"
+            },
+            {
+                "nome": "Crime e Castigo",
+                "autor": "Fiódor Dostoiévski",
+                "tag": "Abandonado",
+                "capa": "https://example.com/crime-e-castigo.jpg"
+            },
+            {
+                "nome": "O Grande Gatsby",
+                "autor": "F. Scott Fitzgerald",
+                "tag": "Abandonado",
+                "capa": "https://example.com/o-grande-gatsby.jpg"
+            },
+            {
+                "nome": "Os Miseráveis",
+                "autor": "Victor Hugo",
+                "tag": "Abandonado",
+                "capa": "https://example.com/os-miseraveis.jpg"
+            },
+            {
+                "nome": "Drácula",
+                "autor": "Bram Stoker",
+                "tag": "Abandonado",
+                "capa": "https://example.com/dracula.jpg"
+            },
+            {
+                "nome": "Frankenstein",
+                "autor": "Mary Shelley",
+                "tag": "Relendo",
+                "capa": "https://example.com/frankenstein.jpg"
+            },
+            {
+                "nome": "O Nome da Rosa",
+                "autor": "Umberto Eco",
+                "tag": "Relendo",
+                "capa": "https://example.com/o-nome-da-rosa.jpg"
+            },
+            {
+                "nome": "As Crônicas de Nárnia",
+                "autor": "C.S. Lewis",
+                "tag": "Relendo",
+                "capa": "https://example.com/cronicas-de-narnia.jpg"
+            },
+            {
+                "nome": "Alice no País das Maravilhas",
+                "autor": "Lewis Carroll",
+                "tag": "Ouvido",
+                "capa": "https://example.com/alice-no-pais.jpg"
+            },
+            {
+                "nome": "O Código Da Vinci",
+                "autor": "Dan Brown",
+                "tag": "Ouvindo",
+                "capa": "https://example.com/codigo-da-vinci.jpg"
+            }
+        ]
+    }
+}

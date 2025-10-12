@@ -11,9 +11,8 @@ import UploadPage from './app/views/upload'
 
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider'
 import '@/global.css'
-import { CloudUpload, Newspaper } from 'lucide-react-native'
-
-const { Home, User, PlusCircle, Heart, Search } = require('lucide-react-native')
+import { CloudUpload, Heart, Library, Newspaper, Search, User } from 'lucide-react-native'
+import LibraryPage from './app/views/library'
 
 const Tab = createBottomTabNavigator()
 
@@ -36,6 +35,8 @@ export default class App extends Component {
                                     return <CloudUpload size={size} color={color} fill={'transparent'} />
                                 } else if (route.name === 'Favorite') {
                                     return <Heart size={size} color={color} fill={'transparent'} />
+                                } else if (route.name === 'Library') {
+                                    return <Library size={size} color={color} fill={'transparent'} />
                                 } else if (route.name === 'Search') {
                                     return <Search size={size} color={color} fill={'transparent'} />
                                 }
@@ -44,6 +45,7 @@ export default class App extends Component {
                             },
                         })}
                     >
+                        <Tab.Screen name='Library' component={LibraryPage} />
                         <Tab.Screen name='Feed' component={FeedPage} />
                         <Tab.Screen name='Profile' component={ProfilePage} />
                         <Tab.Screen name='Upload' component={UploadPage} />
