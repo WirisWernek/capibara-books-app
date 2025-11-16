@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kymount-app",
-    "slug": "kymount-app",
+    "name": "capibara-books-app",
+    "slug": "capibara-books-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

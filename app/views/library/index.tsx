@@ -1,24 +1,35 @@
 import { styles } from '@/App'
+import BookInterface from '@/app/models/BookModel'
+import { LibraryService } from '@/app/services/library.service'
 import { Component } from 'react'
 import { FlatList, View } from 'react-native'
 import CardBook from './components/card'
 
 export default class LibraryPage extends Component {
-    state = {
-        feed: [
-            { id: '1', titulo: 'O Poder do Hábito', autor: 'Maria', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '2', titulo: 'Sapiens', autor: 'João', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '3', titulo: '1984', autor: 'Ana', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '4', titulo: 'Dom Casmurro', autor: 'Pedro', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '5', titulo: 'Harry Potter e a Pedra Filosofal', autor: 'Carla', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '6', titulo: 'O Pequeno Príncipe', autor: 'Lucas', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '7', titulo: 'A Arte da Guerra', autor: 'Mariana', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '8', titulo: 'Código Limpo', autor: 'Rafael', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '9', titulo: 'O Alquimista', autor: 'Sofia', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '10', titulo: 'Mindset', autor: 'Gustavo', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-            { id: '11', titulo: 'Atomic Habits', autor: 'Isabela', capa: 'https://covers.openlibrary.org/b/olid/OL9429879M-M.jpg' },
-        ],
+    libraryService: LibraryService
+    constructor(props: any) {
+        super(props)
+        this.libraryService = new LibraryService()
     }
+
+    state = {
+        feed: [] as BookInterface[],
+    }
+
+    searchData() {
+        this.libraryService.getLibraryBooks().then((books) => {
+            this.setState({ feed: books })
+        })
+    }
+
+    componentDidMount(): void {
+        this.searchData()
+    }
+
+    componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{}>, snapshot?: any): void {
+        this.searchData()
+    }
+
     render() {
         return (
             <View style={styles.container}>

@@ -1,5 +1,5 @@
 {
-  "name": "kymount-app",
+  "name": "capibara-books-app",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -13,12 +13,13 @@
     "@expo/html-elements": "^0.12.5",
     "@gluestack-ui/core": "^3.0.10",
     "@gluestack-ui/utils": "^3.0.7",
-    "@legendapp/motion": "^2.4.0",
+    "@legendapp/motion": "^2.5.3",
     "@react-navigation/bottom-tabs": "^7.4.7",
     "@react-navigation/native": "^7.1.17",
     "babel-plugin-module-resolver": "^5.0.2",
     "babel-preset-expo": "^54.0.2",
     "expo": "~54.0.9",
+    "firebase": "^12.5.0",
     "lucide-react-native": "^0.544.0",
     "nativewind": "^4.2.1",
     "react": "19.1.0",
