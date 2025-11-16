@@ -3,11 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 
 import React, { Component } from 'react'
 import { StyleSheet } from 'react-native'
-import FavoritePage from './app/views/favorite'
-import FeedPage from './app/views/feed'
-import ProfilePage from './app/views/profile'
 import SearchPage from './app/views/search'
-import UploadPage from './app/views/upload'
 
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider'
 import '@/global.css'
@@ -46,10 +42,10 @@ export default class App extends Component {
                         })}
                     >
                         <Tab.Screen name='Library' component={LibraryPage} />
-                        <Tab.Screen name='Feed' component={FeedPage} />
-                        <Tab.Screen name='Profile' component={ProfilePage} />
-                        <Tab.Screen name='Upload' component={UploadPage} />
-                        <Tab.Screen name='Favorite' component={FavoritePage} />
+                        {/* <Tab.Screen name='Feed' component={FeedPage} /> */}
+                        {/* <Tab.Screen name='Profile' component={ProfilePage} /> */}
+                        {/* <Tab.Screen name='Upload' component={UploadPage} /> */}
+                        {/* <Tab.Screen name='Favorite' component={FavoritePage} /> */}
                         <Tab.Screen name='Search' component={SearchPage} />
                     </Tab.Navigator>
                 </NavigationContainer>

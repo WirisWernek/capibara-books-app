@@ -7,7 +7,7 @@ import { Heading } from '@/components/ui/heading'
 import { ModalBody, ModalContent, ModalFooter, ModalHeader } from '@/components/ui/modal'
 import { Text } from '@/components/ui/text'
 import { Component } from 'react'
-import { FlatList, View } from 'react-native'
+import { View } from 'react-native'
 
 export default class ModalViewLivro extends Component<ModalDataInterface> {
     // libraryService: LibraryService;
@@ -40,30 +40,21 @@ export default class ModalViewLivro extends Component<ModalDataInterface> {
                         {this.props.data?.titulo} de {this.props.data?.autor}
                     </Heading>
                 </ModalHeader>
-                <ModalBody>
-                    <FlatList
-                        className='w-full'
-                        data={this.state.historico}
-                        renderItem={({ item }) => (
-							<View>
-								{ 
-									item.markingType == MarkingType.PageNumber &&
-									<Text className='text-center' key={item.id}>
-										Pagina {item.readingPosition} - {item.dateRead.toDateString()}
-									</Text>
-								}
-								{ 
-									item.markingType == MarkingType.ReadingPercentage &&
-									<Text className='text-center' key={item.id}>
-										{item.readingPosition}% - {item.dateRead.toDateString()}
-									</Text>
-								}
-							</View>
-                                
-                            
-                        )}
-                        keyExtractor={(item) => item.id!}
-                    />
+                <ModalBody showsVerticalScrollIndicator={false}>
+                    {this.state.historico.map((item) => (
+                        <View key={item.id}>
+                            {item.markingType == MarkingType.PageNumber && (
+                                <Text className='' key={item.id}>
+                                    {item.dateRead.toDateString()} - Página {item.readingPosition}
+                                </Text>
+                            )}
+                            {item.markingType == MarkingType.ReadingPercentage && (
+                                <Text className='' key={item.id}>
+                                    {item.dateRead.toDateString()} - {item.readingPosition}%
+                                </Text>
+                            )}
+                        </View>
+                    ))}
                 </ModalBody>
                 <ModalFooter className='d-flex justify-center gap-3'>
                     <Button
